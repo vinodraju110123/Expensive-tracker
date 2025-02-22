@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Integration</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <button id="burger-menu" class="burger">☰</button>
+        <nav id="header-nav">
+            <a href="../main/main.html">Home</a>
+            <a href="../history/history.html">Transactions</a>
+            <a href="../AI/ai.html">AI</a>
+            <a href="../calculator/cal.html">Calculator</a>
+            <a href="./payment.html">Payment</a>
+            <a href="../index.html">Logout</a>
+        </nav>
+    </header>
+
+    <div class="payment-container">
+        <h2>Make a Payment</h2>
+        <form id="payment-form">
+            <label for="payee">Payee Name:</label>
+            <input type="text" id="payee" required>
+
+            <label for="payment-amount">Amount ($):</label>
+            <input type="number" id="payment-amount" required>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method">
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="UPI">UPI</option>
+                <option value="Net Banking">Net Banking</option>
+            </select>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

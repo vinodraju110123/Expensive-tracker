@@ -1,0 +1,176 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    text-align: center;
+}
+
+/* Navbar Styling */
+/* Navbar Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Hide Burger by Default */
+.burger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Bar */
+#header-nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Style Nav Links as Buttons */
+#header-nav a {
+    text-decoration: none;
+    color: white;
+    background: #00b894;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border: none;
+}
+
+/* Hover Effect */
+#header-nav a:hover {
+    background: #028174;
+    transform: scale(1.05);
+}
+
+/* Responsive - Show Burger & Hide Menu */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    #header-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 50%;
+        background: #333;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    #header-nav.active {
+        display: flex;
+    }
+
+    #header-nav a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+
+/* Heading */
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Container for Chart and Transaction History */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Chart Container */
+.chart-container {
+    width: 45%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix Chart Size */
+canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* Transaction History */
+#transaction-history {
+    width: 45%;
+    max-width: 400px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Transaction Items */
+.transaction-item {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid;
+}
+
+/* Income Transactions */
+.income {
+    background: #e0ffe6;
+    border-left-color: #00b894;
+}
+
+/* Expense Transactions */
+.expense {
+    background: #ffe0e0;
+    border-left-color: #d63031;
+}
+
+/* Transaction Text Colors */
+.income-text {
+    color: #00b894;
+    font-weight: bold;
+}
+
+.expense-text {
+    color: #d63031;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container, #transaction-history {
+        width: 90%;
+    }
+}

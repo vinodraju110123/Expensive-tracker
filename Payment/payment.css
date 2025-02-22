@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+/* Navbar Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Hide Burger by Default */
+.burger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Bar */
+#header-nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Style Nav Links as Buttons */
+#header-nav a {
+    text-decoration: none;
+    color: white;
+    background: #00b894;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border: none;
+}
+
+/* Hover Effect */
+#header-nav a:hover {
+    background: #028174;
+    transform: scale(1.05);
+}
+
+/* Responsive - Show Burger & Hide Menu */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    #header-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 50%;
+        background: #333;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    #header-nav.active {
+        display: flex;
+    }
+
+    #header-nav a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+.payment-container {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
